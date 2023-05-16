@@ -1,0 +1,10 @@
+<h2>下記の内容でOK?</h2>
+
+<%= form_with(model: @post,local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>内容:<%= @post.content %></p>
+  <%= form.submit "投稿する" %>
+  <%= form.submit "戻る", name: 'back' %>
+<% end %>
+<%= link_to "戻る", :back %>
